@@ -1,0 +1,7 @@
+<h1>What do these characters say ?</h1>
+<div class="card-category">
+<% @articles.each do |article| %>
+<li><%=link_to article.title, article_path(article)%></li>
+<% end %>
+<p><%= link_to "🆕",new_article_path %></p>
+</div>

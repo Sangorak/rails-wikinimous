@@ -1,0 +1,10 @@
+<h1>Read More</h1>
+<%= @article.content %>
+<p>
+<p><%= link_to "Edit",edit_article_path %></p>
+<p><%= link_to "🗑",
+            article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure? You wish to delete #{@article.title}" } %></p>
+<%= link_to "🔙",articles_path %>
+</p>
